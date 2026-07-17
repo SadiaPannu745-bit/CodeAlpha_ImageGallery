@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery - CodeAlpha</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>My Image Gallery</h1>
+
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterImages('all')">All</button>
+    <button class="filter-btn" onclick="filterImages('nature')">Nature</button>
+    <button class="filter-btn" onclick="filterImages('city')">City</button>
+    <button class="filter-btn" onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://loremflickr.com/400/300/nature,forest" class="gallery-img" data-category="nature" onclick="openLightbox(0)">
+    <img src="https://loremflickr.com/400/300/nature,mountain" class="gallery-img" data-category="nature" onclick="openLightbox(1)">
+    <img src="https://loremflickr.com/400/300/nature,waterfall" class="gallery-img" data-category="nature" onclick="openLightbox(2)">
+    <img src="https://loremflickr.com/400/300/nature,lake" class="gallery-img" data-category="nature" onclick="openLightbox(3)">
+    <img src="https://loremflickr.com/400/300/city,skyline" class="gallery-img" data-category="city" onclick="openLightbox(4)">
+    <img src="https://loremflickr.com/400/300/city,street" class="gallery-img" data-category="city" onclick="openLightbox(5)">
+    <img src="https://loremflickr.com/400/300/city,building" class="gallery-img" data-category="city" onclick="openLightbox(6)">
+    <img src="https://loremflickr.com/400/300/city,night" class="gallery-img" data-category="city" onclick="openLightbox(7)">
+    <img src="https://loremflickr.com/400/300/animals,dog" class="gallery-img" data-category="animals" onclick="openLightbox(8)">
+    <img src="https://loremflickr.com/400/300/animals,cat" class="gallery-img" data-category="animals" onclick="openLightbox(9)">
+    <img src="https://loremflickr.com/400/300/animals,bird" class="gallery-img" data-category="animals" onclick="openLightbox(10)">
+    <img src="https://loremflickr.com/400/300/animals,lion" class="gallery-img" data-category="animals" onclick="openLightbox(11)">
+</div>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <span class="prev-btn" onclick="changeImage(-1)">&#10094;</span>
+    <img id="lightbox-img" src="">
+    <span class="next-btn" onclick="changeImage(1)">&#10095;</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
